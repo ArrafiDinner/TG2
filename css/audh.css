@@ -1,0 +1,363 @@
+*,
+html,
+body {
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    font-family: 'Mabry Pro';
+    font-weight: 500;
+    font-style: normal;
+    
+}
+/* !!!!!!!!!  ALHAMDULILAH BISA IMPORT  !!!!!!!!!! */
+
+.MabryBold {
+    font-family: 'Mabry Pro';
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Mabry Pro'; 
+    src: url('ttf/MabryPro-Medium.ttf') format('truetype'); 
+    /* font-family: 'Mabry Pro'; 
+    src: url('ttf/MabryPro-Bold.ttf') format('truetype');  */
+}
+/* Author: DinnerArrafi
+https://github  .com/ArrafiDinner */
+
+/* Font lists:*/
+.Sedgwick {font-family: "Sedgwick Ave", cursive}
+.Roboto {font-family: "Roboto Slab", serif;}
+.Noto {font-family: "Noto Sans", sans-serif;}
+.Lora {font-family: "Lora", serif;}
+
+/* mau coba pakai root */
+:root {
+    --biru-warna: rgb(70,89,255);
+    --putih-warna: #eaeaea;
+    --hitam-warna: #222222;
+    --merah-warna:  rgb(224, 11, 11);
+}
+
+/* CSS for Navbar ========================================== */
+
+nav {
+    position: fixed;
+    background-color: white;
+    height: 80px;
+    width: 100%;
+    /* display: flex ;
+    background-color: white;
+    justify-content: space-around;
+    padding: 20px 5px; */
+}
+
+nav ul {
+    float: right;
+    margin-right: 20px;
+    z-index: 2;
+    /* margin-top: 13px; 
+    font-weight: bold;
+    display: flex;
+    list-style: none;
+    justify-content: space-between; */
+    
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+    font-weight: bold;
+}
+
+nav ul li a {
+    color: var(--hitam-warna);
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-decoration: none;
+    /* color: var(--hitam-warna);
+    text-decoration: none;
+    padding: 7px 13px;
+    margin-left: 50px; */
+}
+.checkbtn{
+    font-size: 30px;
+    color: var(--hitam-warna);
+    float: right;
+    line-height: 80px;
+    margin-right: 20px ;
+    cursor: pointer;
+    display: none;
+}
+#check {
+    display: none;
+}
+
+a:hover, a.active {
+    background-color: var(--hitam-warna) ;
+    color: white;
+    transition: .5s;
+}
+
+.logo {
+    color: var(--hitam-warna);
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 20px;
+    font-weight: bolder;
+}
+.PClogo {
+    display: visible;
+}
+.MBlogo {
+    display: none;
+}
+/* Body ========================================== */
+
+
+    /* background: url() no-repeat;
+    background-size: cover;
+    height: calc(100vh - 80px) ;
+    z-index: 1; */
+    /* TANYA COBA--------------------------------------------------------- */
+
+.container {
+    display: block;
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    background-color: var(--biru-warna);
+    
+}
+.wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center ;
+    align-items: center;
+    margin-right: 5px;
+    margin-left: 5px;
+    /* width: 100%;
+    height: auto; */
+}
+.card{
+    width: 20% ;
+    border-radius: 10px;
+    border: 1px solid white;
+    background-color: var(--putih-warna);
+    /* color: var(--hitam-warna) ; */
+    padding: 30px;
+    padding-right: 30px;
+    margin: 7px;
+    
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+.text-center {
+    text-align: center;
+}
+/* Card ========================================== */
+
+.fa-product-hunt {
+    margin-top: 4px;
+    font-size: 34px;
+    color:  var(--biru-warna);
+}
+.title {
+    font-size: 2.2em;
+    color: var(--hitam-warna);
+}
+.fa-pinterest{
+    margin-top: 4px;
+    font-size: 34px;
+    color:  var(--merah-warna);
+ }
+.Aa {
+    margin-top: .1px;
+    font-size: 30px;
+    color: rgb(201, 211, 0);
+}
+/* Card juga ========================================== */
+.Description {
+    margin-top: 4px;
+    font-size: 1.1em;
+}
+.btn {
+    border-radius: 10px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 8px;
+    padding: 8px;
+    border: solid 2.2px;
+    width: 100% ;
+}
+/* NOTEMYSELF: bisa rotate, skew, scale */
+.btn:hover {
+    background-color: var(--biru-warna);
+    color: #eaeaea;
+    transform: rotate(360deg);
+    transition: .3s ease-in-out
+}
+.btn2 {
+    border-radius: 10px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 8px;
+    padding: 8px;
+    border: solid 2.2px;
+    width: 100%;
+}
+/* NOTEMYSELF: bisa rotate, skew, scale */
+.btn2:hover {
+    background-color: rgb(224, 11, 11);
+    color: #eaeaea;
+    transform: rotate(10deg);
+    transition: .3s ease-in-out
+}
+.btn3 {
+    border-radius: 10px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 8px;
+    padding: 8px;
+    border: solid 2.2px;
+    width: 100%;
+}
+/* NOTEMYSELF: b*/
+.btn3:hover {
+    background-color: rgb(165, 173, 0);
+    color: #eaeaea;
+    transform: rotate(.1deg);
+    transition: .3s ease-in-out
+}
+.container2 {
+    display: none;
+}
+
+/* AA============== scroll ==============AA */
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: white; 
+    border-radius: 6px; 
+    
+}
+::-webkit-scrollbar-track {
+    background-color: var(--hitam-warna);
+}
+
+::-webkit-scrollbar-button {
+    display: none; 
+}
+
+
+/* ============== BUAT UKURAN TABLET ============== */
+
+@media screen and (max-width: 952px){
+
+    .logo {
+        font-size: 25px;
+        padding-left: 50px;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+
+    }
+
+    .container {
+        background-color: tomato;
+    }
+    .card{
+        margin-top: 8px;
+        margin-bottom: .5px;
+        width: 300px;
+        height: 199px;
+    }
+    .fa-product-hunt {
+        margin-top: 22px;
+        font-size: 34px;
+        color:  var(--biru-warna);
+    }
+    .fa-pinterest {
+        margin-top: 22px;
+        font-size: 34px;
+        color:  var(--merah-warna);
+    }
+
+    .Aa {
+        margin-top: 12px;
+        font-size: 35px;
+        color: rgb(201, 211, 0);
+    }
+    .title {
+        font-size: 2em;
+    }
+    .Description {
+        font-size: 1.1em;
+    }
+    
+}
+
+/* ============== BUAT UKURAN MOBILE ============== */
+
+@media screen and (max-width: 640px){
+    
+    .PClogo {
+        display: none;
+    }
+    .MBlogo {
+        display: block;
+    }
+
+    .checkbtn {
+        display: block;
+    }
+    #check:checked ~ ul {
+        right: 0;
+    }
+    ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        right: -640px;
+        top: 80px;
+        transition: all .5s;
+        text-align: center;
+        background-color: var(--putih-warna);
+        z-index: -1;
+    }
+
+    nav ul {margin-right: 1px;}
+
+    nav ul li {
+        display: block;
+        margin: 50px;
+        line-height: 30px;
+    }
+    nav ul li a {
+        font-size: 20px ;
+    }
+    a:hover, a.active {
+        background: var(--hitam-warna);
+        color: white;
+        z-index: 1;
+    }
+
+
+    .logonya {
+        margin-top: 1px;
+        font-size: 22px;
+    }
+
+    .container {
+        background-color: green;
+    }
+
+}

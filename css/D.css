@@ -1,0 +1,300 @@
+*,
+html,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Mabry Pro';
+    font-weight: 300;
+    
+    
+}
+
+/* Author: DinnerArrafi
+https://github.com/ArrafiDinner */
+
+/* Font lists:*/
+.Sedgwick {font-family: "Sedgwick Ave", cursive}
+.Roboto {font-family: "Roboto Slab", serif;}
+.Noto {font-family: "Noto Sans", sans-serif;}
+.Lora {font-family: "Lora", serif;}
+
+/* mau coba pakai root */
+:root {
+    --biru-gelap: #1b3050;
+    --biru-terang: #588bae;
+    --putih-warna: #eaeaea;
+    --hitam-warna: #222222;
+    --merah-warna: tomato;
+
+    --hijo-gelap: #1d2e28;
+    --hijau-mid: #18392b;
+    --hyjau-Light: #0A5c36;         
+    
+}
+
+/* CSS for Navbar ========================================== */
+
+nav {
+    position: fixed;
+    background-color: var(--hitam-warna);
+    height: 80px;
+    width: 100%;
+    border-bottom: solid 2px white;
+    /* display: flex ;
+    background-color: white;
+    justify-content: space-around;
+    padding: 20px 5px; */
+}
+
+nav ul {
+    float: right;
+    margin-right: 20px;
+    z-index: 5;
+    background-color: var(--hitam-warna);
+    /* border-bottom: solid .1px white; */
+    /* margin-top: 13px; 
+    font-weight: bold;
+    display: flex;
+    list-style: none;
+    justify-content: space-between; */
+    
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 75px;
+    margin: 0 5px;
+    font-weight: bold;
+}
+
+nav ul li a {
+    color: white;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-decoration: none;
+    /* color: var(--hitam-warna);
+    text-decoration: none;
+    padding: 7px 13px;
+    margin-left: 50px; */
+}
+.checkbtn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 20px ;
+    cursor: pointer;
+    display: none;
+}
+#check {
+    display: none;
+}
+
+a:hover, a.active {
+    background-color: white ;
+    color: var(--hitam-warna);
+    transition: .5s;
+}
+
+.logo {
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 20px;
+    
+}
+.PClogo {
+    display: visible;
+}
+.MBlogo {
+    display: none;
+}
+/* Body ========================================== */
+
+.header {
+    font-size: 54px;
+    background: #1d3050;
+    line-height: 80px;
+    padding: 0 20px;
+}
+
+.div{
+    background: url("daun.jpg") no-repeat;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    display: flex;
+    flex-direction: rowa;
+}
+
+.left {   
+    padding: 3em 0 3em 0;
+    flex: 1 1 100px ;
+    
+}
+
+.right {
+    height: auto;
+    margin-top: 60px;
+    color: white;
+    display: flex;
+    background-color: #18392b;
+    /* background: blur; */
+    padding: 40px;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    border-left: solid 5.2px var(--hijo-gelap);
+    /* margin-top: 60px;
+    color: white;
+    display: flex;
+    background-color: #18392b;
+    padding: 40px;
+    flex: 1;
+    flex-direction: column; */
+
+}
+
+.line{
+  width: 100%;
+  height: 1px;
+  background-color: var(--hitam-warna);
+  margin: 20px 0
+}
+
+.content {
+    color: white ;
+    background-color: var(--hitam-warna);
+    padding: 20px;
+    line-height: 50px;
+    border-bottom: solid 2px white;
+}
+.Latest {
+    line-height: 50px;
+}
+.judul {
+    font-size: 1.5em;
+    padding: 50 0 50 0;
+
+}
+.isi{
+    line-height: 30px;
+    margin-right: 70px;
+    margin-bottom: 30px;
+}
+.buttonH {
+    color: white;
+    text-decoration: underline;
+
+}
+footer {
+    color: wheat;
+    background-color: var(--hitam-warna);
+    padding: 10px 10px 10px 20px;
+}
+
+/* section {
+    background-image: src('aw.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: calc(100vh - 80px);
+    
+    
+} */
+
+/* AA============== scroll ==============AA */
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: white; 
+    border-radius: 6px; 
+    
+}
+::-webkit-scrollbar-track {
+    background-color: var(--hitam-warna);
+}
+
+::-webkit-scrollbar-button {
+    display: none; 
+}
+
+
+/* ============== BUAT UKURAN TABLET ============== */
+
+@media screen and (max-width: 952px){
+
+    .logo { font-size: 25px; padding-left: 50px;}
+    .header { font-size: 55px; padding-left: 50px;}
+
+    nav ul li a {font-size: 16px;}
+
+    .content {
+        padding: 0 50px;
+    }
+    
+}
+
+/* ============== BUAT UKURAN MOBILE ============== */
+
+@media screen and (max-width: 629px){
+    
+    .PClogo {display: none;}
+    .MBlogo {display: block;}
+    .checkbtn {display: block;}
+    #check:checked ~ ul {right: 0;}
+    ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        right: -640px;
+        top: 80px;
+        transition: all .5s;
+        text-align: center;
+        background-color: var(--putih-warna);
+        z-index: -1;
+    }
+    nav ul {margin-right: 1px;}
+    nav ul li {display: block; margin: 50px; line-height: 30px;}
+    nav ul li a {font-size: 20px ;}
+    a:hover, a.active {
+        background: white; color: var(--hitam-warna); z-index: 1;}
+
+
+/* ============== body ============== */
+
+        .div {
+            flex-direction: column;
+        }
+        main {
+            padding: 5em 0 5em 0;
+        }
+    
+        .right {
+            border-left: .1px;
+            border-bottom:solid 2px white;
+            border-top:solid 2px white;
+        }
+        .div {
+         background: url("daun.jpg");
+         height: 100vh;
+         background-size: 50em;
+        }
+        
+        img {
+            height: auto;
+            width: 100%;
+            /* display: none; */
+        }
+        footer {
+            color: wheat;
+            background-color: var(--hitam-warna);
+            padding: 10px 10px 10px 50px;
+        }
+}
+

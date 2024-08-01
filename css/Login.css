@@ -1,0 +1,277 @@
+*,
+html,
+body {
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    font-family: 'Mabry Pro';
+    font-weight: 500;
+    font-style: normal;
+}
+
+.MabryBold {
+  font-family: 'Mabry Pro';
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Mabry Pro'; 
+  src: url('ttf/MabryPro-Medium.ttf') format('truetype'); 
+  /* font-family: 'Mabry Pro'; 
+  src: url('ttf/MabryPro-Bold.ttf') format('truetype');  */
+}
+/* Author: DinnerArrafi
+https://github  .com/ArrafiDinner */
+
+/* Font lists:*/
+.Sedgwick {font-family: "Sedgwick Ave", cursive}
+.Roboto {font-family: "Roboto Slab", serif;}
+.Noto {font-family: "Noto Sans", sans-serif;}
+.Lora {font-family: "Lora", serif;}
+
+/* mau coba pakai root */
+:root {
+    --biru-warna: rgb(70,89,255);
+    --putih-warna: #eaeaea;
+    --hitam-warna: #222222;
+    --merah-warna:  rgb(224, 11, 11);
+}
+
+nav {
+    background-color: white;
+    height: 80px;
+    width: 100%;
+    border-bottom: solid 2px var(--hitam-warna);
+    /* display: flex ;
+    background-color: white;
+    justify-content: space-around;
+    padding: 20px 5px; */
+}
+
+nav ul {
+    float: right;
+    margin-right: 20px;
+    z-index: 2;
+    /* margin-top: 13px; 
+    font-weight: bold;
+    display: flex;
+    list-style: none;
+    justify-content: space-between; */
+    
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+    font-weight: bold;
+}
+
+nav ul li a {
+    color: var(--hitam-warna);
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-decoration: none;
+    /* color: var(--hitam-warna);
+    text-decoration: none;
+    padding: 7px 13px;
+    margin-left: 50px; */
+}
+.checkbtn{
+    font-size: 30px;
+    color: var(--hitam-warna);
+    float: right;
+    line-height: 80px;
+    margin-right: 20px ;
+    cursor: pointer;
+    display: none;
+}
+#check {
+    display: none;
+}
+
+a:hover, a.active {
+    background-color: var(--hitam-warna) ;
+    color: white;
+    transition: .5s;
+}
+
+.logo {
+    color: var(--hitam-warna);
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 20px;
+    font-weight: bolder;
+}
+.PClogo {
+    display: visible;
+}
+.MBlogo {
+    display: none;
+}
+/* Body ========================================== */
+
+
+
+body {
+    background-color: #f5f5f5;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    height: 100vh;
+  }
+
+.container1 {
+  background-color: white;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding-top: 5%;
+  padding-bottom: 15%;
+}
+
+
+
+  #authSection {
+    background: white;
+    border: solid 2px var(--hitam-warna);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+  }
+   #authSection h2 {
+    margin-bottom: 20px;
+    color: #333;
+  }
+  #authSection input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 10px 0;
+    /* border: 1px solid #ddd; */
+    border-radius: 5px;
+  }
+  
+  /* Styling buttons */
+  #authSection button {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 10px 0;
+  
+    border-radius: 5px;
+  }
+
+  #signupButton:hover {
+      background-color: white ;
+      color: var(--hitam-warna);
+      transition: .5s;
+  }
+  #signupButton {
+      background-color: #222222;
+      color: white;
+  }
+  #toSignin:hover {
+    background-color: #222222;
+      color: white;
+    transition: .5s;
+}
+  #toSignin {
+      background-color: white;
+      color: var(--hitam-warna);
+  }
+  #signinButton:hover {
+    background-color: white ;
+    color: var(--hitam-warna);
+    transition: .5s;
+}
+  #signinButton {
+      background-color: #222222;
+      color: white;
+  }
+  #toSignup:hover {
+    background-color: #222222;
+      color: white;
+    transition: .5s;
+  }
+  #toSignup {
+      background-color: white;
+      color: var(--hitam-warna);
+  }
+  /* Hide sections initially */
+#signinSection {
+  display: none;
+}
+
+
+h2, input, button {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+footer {
+  color: wheat;
+  background-color: var(--hitam-warna);
+  padding: 10px 10px 10px 0px;
+}
+
+/* =================================================================================================== */
+
+
+@media screen and (max-width: 629px){
+    
+  .PClogo {display: none;}
+  .MBlogo {display: block;}
+/*   
+  .checkbtn {display: block;}
+  #check:checked ~ ul {right: 0;}
+  ul {
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      right: -640px;
+      top: 80px;
+      transition: all .5s;
+      text-align: center;
+      z-index: -1;
+  }
+  nav ul {margin-right: 1px;}
+  nav ul li {display: block; margin: 50px; line-height: 30px;}
+  nav ul li a {font-size: 20px ;}
+  a:hover, a.active {
+      background: white; color: var(--hitam-warna); z-index: 1;} */
+}
+/* == easy fix ==*/
+@media only screen and (min-height: 667px) {
+  .div {
+      height: 100vh;
+     }
+     /* SE */
+}
+@media only screen and (min-height: 740px) {
+  .div {
+      height: 100vh;
+     }
+      /*  S8+  */
+}
+@media only screen and (min-height: 8px) {
+  .div {
+      height: 91vh;
+     }
+      /* XR */
+}
+@media only screen and (min-height: 844px) {
+  .div {
+      height: 80vh;
+     }
+      /* XR */
+}
+@media only screen and (min-height: 896px) {
+  .div {
+      height: 80vh;
+     }
+      /* 12 */ 
+}

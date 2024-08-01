@@ -1,0 +1,306 @@
+*,
+html,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Mabry Pro';
+    font-weight: 500;
+    background-color: var(--hitam-warna);
+    
+}
+
+/* Author: DinnerArrafi
+https://github.com/ArrafiDinner */
+
+/* Font lists:*/
+.Sedgwick {font-family: "Sedgwick Ave", cursive;}
+.Roboto {font-family: "Roboto Slab", serif;}
+.Noto {font-family: "Noto Sans", sans-serif;}
+.Lora {font-family: "Lora", serif;}
+
+/* mau coba pakai root */
+:root {
+    --biru-gelap: #1b3050;
+    --biru-terang: #588bae;
+    --putih-warna: #eaeaea;
+    --hitam-warna: #222222;
+    --merah-warna: tomato;
+
+    --hijo-gelap: #1d2e28;
+    --hijau-mid: #18392b;
+    --hyjau-Light: #0A5c36;         
+    
+}
+
+.bold {
+    font-weight: 900;
+}
+
+/* Section CSS for Navbar ========================================== */
+
+nav {
+    justify-content: space-between; /* Untuk menempatkan elemen di sisi kiri dan kanan */
+    align-items: center;
+
+    position: fixed;
+    background-color: var(--hitam-warna);
+    height: 80px;
+    width: 100%;
+    border-bottom: solid 2px white;
+    /* display: flex ;
+    background-color: white;
+    justify-content: space-around;
+    padding: 20px 5px; */
+}
+
+nav ul {
+    float: right;
+    margin-right: 20px;
+    z-index: 5;
+    background-color: var(--hitam-warna);
+    /* border-bottom: solid .1px white; */
+    /* margin-top: 13px; 
+    font-weight: bold;
+    display: flex;
+    list-style: none;
+    justify-content: space-between; */
+    
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 75px;
+    margin: 0 5px;
+    font-weight: bold;
+}
+
+nav ul li a {
+    color: white;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-decoration: none;
+    /* color: var(--hitam-warna);
+    text-decoration: none;
+    padding: 7px 13px;
+    margin-left: 50px; */
+}
+.checkbtn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 20px ;
+    cursor: pointer;
+    display: none;
+}
+#check {
+    display: none;
+}
+
+a:hover, a.active {
+    background-color: white ;
+    color: var(--hitam-warna);
+    transition: .5s;
+}
+
+.logo {
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 20px;
+    
+}
+.PClogo {
+    display: visible;
+}
+.MBlogo {
+    display: none;
+}
+
+
+
+/* Section the Body ========================================== */
+
+.contain {
+    max-height: fit-content;
+    display: flex;
+    padding: 50px;
+    padding-top: 20px;
+    padding-bottom: 38vh;
+    background-color: #272727 ;
+}
+
+.back {
+
+    /* height: 100%; */
+    margin-top: 110px;
+    color: white;
+    
+    background-color: var(--hitam-warna);
+    
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: solid 2.2px white;
+    /* margin-top: 60px;
+    color: white;
+    display: flex;
+    background-color: #18392b;
+    padding: 40px;
+    flex: 1;
+    flex-direction: column; */
+
+}
+
+.Desc2 {
+    color: rgb(155, 155, 155);
+    font-size: 15px;
+    margin: 1px 0 30px 0;
+}
+.Desc {
+    margin: 30px 0 10px 0;
+    font-size: 22px;
+}
+
+.login {
+    border: solid 2px white;
+    color: white;
+    text-align: center;
+    padding: 10px 10px 10px 10px;
+}
+
+footer {
+    position: sticky;
+    bottom: 0;
+    color: wheat;
+    background-color: var(--hitam-warna);
+    border-top: solid 2px white;
+    padding: 10px 10px 10px 20px;
+}
+
+/* AA============== scroll ==============AA */
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: white; 
+    border-radius: 6px; 
+    
+}
+::-webkit-scrollbar-track {
+    background-color: var(--hitam-warna);
+}
+
+::-webkit-scrollbar-button {
+    display: none; 
+}
+
+
+/* ============== BUAT UKURAN TABLET ============== */
+
+@media screen and (max-width: 952px){
+    
+    .logo { font-size: 25px; padding-left: 50px;}
+    .header { font-size: 55px; padding-left: 50px;}
+
+    nav ul li a {font-size: 16px;}
+
+}
+/* ============== BUAT UKURAN MOBILE ============== */
+
+@media screen and (max-width: 629px){
+    
+    .PClogo {display: none;}
+    .MBlogo {display: block;}
+    .checkbtn {display: block;}
+    #check:checked ~ ul {right: 0;}
+    ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        right: -640px;
+        top: 80px;
+        transition: all .5s;
+        text-align: center;
+        background-color: var(--putih-warna);
+        z-index: -1;
+    }
+    nav {border-bottom: solid 81px white;}
+    nav ul {margin-right: 1px;}
+    nav ul li {display: block; margin: 50px; line-height: 30px;}
+    nav ul li a {font-size: 20px ;}
+    a:hover, a.active {
+        background: white; color: var(--hitam-warna); z-index: 1;}
+
+        
+/* ============== body ============== */
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (min-height: 667px) {
+    .div {
+        height: 100vh;
+       }
+    .right {
+        margin-top: 10px;
+    }
+       /* SE */
+}
+@media only screen and (min-height: 740px) {
+    .div {
+        height: 100vh;
+       }
+        /*  S8+  */
+}
+@media only screen and (min-height: 8px) {
+    .div {
+        height: 91vh;
+       }
+        /* XR */
+}
+@media only screen and (min-height: 844px) {
+    .div {
+        height: 80vh;
+       }
+        /* XR */
+}
+@media only screen and (min-height: 896px) {
+    .div {
+        height: 95vh;
+        margin-bottom: 30px;
+       }
+    .contain {
+        padding-bottom: 500px;
+    }
+        /* 12 */ 
+}
+
+@media only screen and (min-height: 1180px) {
+    /* .div {
+        height: 95vh;
+        margin-bottom: 30px;
+       } */
+    .contain {
+        padding-bottom: 900px;
+    }
+        /* AIR/PRO */ 
+}
